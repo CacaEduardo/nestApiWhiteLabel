@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Rodar os testes antes de formatar
+yarn test --bail --findRelatedTests && yarn format
