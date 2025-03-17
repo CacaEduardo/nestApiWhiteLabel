@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "env": {
+        "MONGO_URL=mongodb+srv":"//cefonsecasilva:8COMOHEQG3dy1Nm4@icar.8smjpef.mongodb.net/obstetrix",
+        "JWT_SECRET":"f21e5fa98bbd8550c5a67e6fa1edec95"
+    },
+    "builds": [
+        {
+            "src": "src/main.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/main.ts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}
